@@ -53,6 +53,7 @@ def marginal_counts(counts: Dict[str, int],
     # Extract total number of qubits from first count key
     # We trim the whitespace seperating classical registers
     # and count the number of digits
+    print(counts)
     num_qubits = len(next(iter(counts)).replace(' ', ''))
 
     # Check if we do not need to marginalize. In this case we just trim

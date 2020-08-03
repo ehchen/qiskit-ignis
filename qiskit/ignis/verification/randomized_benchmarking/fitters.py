@@ -151,6 +151,7 @@ class RBFitter(RBFitterBase):
             rb_pattern = [[0]]
 
         self._cliff_lengths = cliff_lengths
+        print(cliff_lengths)
         self._rb_pattern = rb_pattern
         self._raw_data = []
         self._ydata = []
@@ -312,6 +313,7 @@ class RBFitter(RBFitterBase):
                 for k, _ in enumerate(self._cliff_lengths[patt_ind]):
                     circ_name = self._circ_name_type + '_length_%d_seed_%d' \
                                 % (k, seed)
+                    print(circ_name)
                     counts_subspace = marginal_counts(
                         circ_counts[circ_name],
                         np.arange(startind, endind))
